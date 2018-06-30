@@ -1,0 +1,41 @@
+{
+  "name": "project2-virtubank",
+  "version": "1.0.0",
+  "description": "Online Bank Application",
+  "main": "server.js",
+  "dependencies": {
+    "http": "^0.0.0",
+    "https": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manukutty74/Project2-Virtubank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manukutty74/Project2-Virtubank/issues"
+  },
+  "homepage": "https://github.com/manukutty74/Project2-Virtubank#readme",
+"dependencies": {
+  "bcrypt-nodejs": "0.0.3",
+  "body-parser": "^1.18.2",
+  "express": "^4.16.3",
+  "express-handlebars": "^3.0.0",
+  "express-session": "^1.15.6",
+  "http": "0.0.0",
+  "https": "^1.0.0",
+  "mysql2": "^1.5.3",
+  "nodemailer": "^4.6.4",
+  "passport": "^0.4.0",
+  "passport-local": "^1.0.0",
+  "sequelize": "^4.37.7",
+  "sequelize-cli": "^4.0.0"
+},
+"devDependencies": {}
+}

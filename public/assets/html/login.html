@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+        }
+
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-4 {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .bgimg-1 {
+            background-image: url("https://assets1.ello.co/uploads/user/cover_image/231778/ello-optimized-ddb982ee.jpg");
+            min-height: 100%;
+        }
+
+        .bgimg-2 {
+            background-image: url("https://cdn.wallpapersafari.com/84/97/a8ikhj.jpg");
+            min-height: 400px;
+        }
+
+        .bgimg-4 {
+            background-image: url("http://www.zastavki.com/pictures/originals/2015/People_Most_loving_family_097669_.jpg");
+            min-height: 100%;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption span.border,
+        .border {
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 10px;
+        }
+
+        .signup {
+            text-decoration: none;
+            color: green;
+        }
+
+        .signup:hover {
+            color: white;
+        }
+
+        h3 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font: 20px "Lato", sans-serif;
+            color: #111;
+        }
+
+        div.modal-body {
+            background-color: #00800026;
+            color: black;
+            text-align: left;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1,
+            .bgimg-2,
+            .bgimg-4 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        (function(d, m){ 
+          var o = {"appId":"5ff9068d1adac16a59d35690c5f9501","isAnonymousChat":true,"agentId":"manu_kutty@yahoo.com","agentName":"VirtubankGenie","conversationTitle":"VirtuBankGenie","email":"",botIds:["virtubankbot"]};
+          var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+          s.src = "https://api.kommunicate.io/kommunicate.app";
+          var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+          window.kommunicate = m; m._globals = o;
+        })(document, window.kommunicate || {});
+    </script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="bgimg-1">
+        <div class="caption">
+            <img src="../images/Asset 1xxhdpi.png" alt="virtuabank logo" class="text-center">
+            <img/>
+        </div>
+    </div>
+
+    <div style="color: #83a46c;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <h3 style="text-align:center;">Welcome</h3>
+        <p class="text-center">Online and Mobile Banking Made Easy..</p>
+    </div>
+
+    <div class="bgimg-2">
+        <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px;color: #000;">Enroll
+                <a href="#" class="signup" data-toggle="modal" data-target=".signup-modal">Here</a>Today</a>
+            </span>
+        </div>
+    </div>
+
+    <div style="position:relative;">
+        <div style="color:#ddd;background-color:#9cbf84;text-align:center;padding:50px 80px;text-align: center;">
+            <div class="form-wrap">
+                <h1>Log in with your email account </h1>
+                <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" placeholder="A Registered User Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="key" class="sr-only">Password</label>
+                        <input type="password" name="key" id="key" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <span class="character-checkbox" onclick="showPassword()"></span>
+                        <span class="label">Show password</span>
+                    </div>
+                    <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in" style="color:grey">
+                </form>
+                <a href="#" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>
+                <hr>
+            </div>
+
+            <div class="modal fade forget-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title" style="color:black">Recover password</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Enter Email Address:</p>
+                            <input type="email" name="recovery-email" id="recovery-email" class="form-control" autocomplete="off">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-custom" style="color:black" id="recovery-btn">Recover</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade signup-modal" tabindex="-1" role="dialog" aria-labelledby="myForgetModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title" style="color:black">Sign-Up</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Name:</p>
+                            <input type="name" name="name" id="customer-name" class="form-control" autocomplete="off">
+                            <p>Email:</p>
+                            <input type="email" name="signup-email" id="signup-email" class="form-control" autocomplete="off">
+                            <p>Phone Number:</p>
+                            <input type="number" name="phone-number" id="phone-number" class="form-control" autocomplete="off">
+                            <p>Address:</p>
+                            <input type="address" name="address" id="address" class="form-control" autocomplete="off">
+                            <p>Login ID:</p>
+                            <input type="id" name="id" id="login-id" class="form-control" autocomplete="off">
+                            <p>Create Password:</p>
+                            <input type="password" name="newpw" id="newpw" class="form-control" autocomplete="off">
+                            <p>Confirm Password:</p>
+                            <input type="password" name="confirmpw" id="confirmpw" class="form-control" autocomplete="off">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-custom enroll" style="color:black">Enroll</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bgimg-4">
+        <div class="caption">
+            <span class="border" style="opacity:0.5">Thank You. :)</span>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            // Getting a reference to the userid / email 
+            var newUserId = $("#email");
+            var newUserPwd = $('#key');
+
+
+            $("#btn-login").on("click", function (event) {
+
+                event.preventDefault();
+
+                var registeredCustomer = {
+                    customer_email: $("#email").val().trim(),
+                    customer_password: $("#key").val().trim(),
+                };
+                console.log("REG CUSTOMER: " + registeredCustomer);
+                $.post("/registeredCustomer", registeredCustomer)
+                    // on success, run this callback
+                    .then(function (data) {
+                        console.log(data);
+                        if (data) {
+                            window.localStorage.setItem("customer", data.id);
+                            window.localStorage.setItem("customer_name", data.customer_name);
+                            window.location.href = "/dashboard";
+                        }
+
+                    });
+
+            });
+            // ============ N e w - U s e r - S i g n U p ===================
+            $(".enroll").on("click", function (event) {
+                event.preventDefault();
+                var newpw = $("#newpw").val().trim();
+                var confirmpw = $("#confirmpw").val().trim();
+
+                if (newpw === confirmpw) {
+                    var newUser = {
+                        userName: $("#customer-name").val().trim(),
+                        userEmail: $("#signup-email").val().trim(),
+                        userPhone: $("#phone-number").val().trim(),
+                        userAddress: $("#address").val().trim(),
+                        userID: $("#login-id").val().trim(),
+                        userPw: $("#confirmpw").val().trim()
+                    }
+                    console.log(newUser);
+                } else {
+                    console.log("Make sure your passwords match.")
+                }
+
+                $.post("/newCustomer", newUser)
+                    // on success, run this callback
+                    .then(function (data) {
+                        if (data) {
+                            window.localStorage.setItem("customer", data.id);
+                            window.localStorage.setItem("customer_name", data.customer_name);
+                            window.location.href = "/home";
+                        }
+                        console.log("DATA Customer: " + data);
+                        $("#customer-name").val("");
+                        $("#signup-email").val("");
+                        $("#phone-number").val("");
+                        $("#address").val("");
+                        $("#login-id").val("");
+                        $("#newpw").val("");
+                        $("#confirmpw").val("");
+
+                    });
+
+            })
+
+            // forgot password , create a route to send email 
+
+            $("#recovery-btn").on("click", function (event) {
+
+                var forgotCustomer = {
+                    customer_email: $("#recovery-email").val().trim()
+
+                }
+
+                $.post("/forgotpassword", forgotCustomer)
+                    // on success, run this callback
+                    .then(function (data) {
+
+                        event.preventDefault();
+
+                    });
+
+            });
+
+
+        }) // end of document ready
+    </script>
+
+</body>
+
+</html>
