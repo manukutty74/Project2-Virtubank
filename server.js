@@ -51,13 +51,13 @@ app.get('/', (req, res) => {
   res.send('WORKING!')
 })
 
-const httpsOptions = {
-  key: fs.readFileSync('./privatekey.key'),
-  cert: fs.readFileSync('./certificate.crt')
-}
-const server = https.createServer(httpsOptions, app).listen(port, () => {
-  console.log('server running at ' + port)
-})
+// const httpsOptions = {
+// //   key: fs.readFileSync('./privatekey.key'),
+// //   cert: fs.readFileSync('./certificate.crt')
+// }
+// const server = https.createServer(httpsOptions, app).listen(port, () => {
+//   console.log('server running at ' + port)
+// })
 
 
 // Syncing our sequelize models and then starting our Express app
