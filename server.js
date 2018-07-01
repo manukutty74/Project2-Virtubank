@@ -19,7 +19,7 @@ var session    = require('express-session')
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 8081;
+var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -45,11 +45,13 @@ app.set('view engine', 'handlebars');
 var router = require('./controllers/bank_controller.js');
 app.use('/', router);
 
-//https server
-//===============================================================
+//https server 
+ //===============================================================
 app.get('/', (req, res) => {
   res.send('WORKING!')
-})
+}) 
+
+
 
 // const httpsOptions = {
 // //   key: fs.readFileSync('./privatekey.key'),
