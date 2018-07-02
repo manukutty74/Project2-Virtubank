@@ -31,7 +31,8 @@ router.post("/customers", function (req, res) {
 
     const response = { 
       
-      fullfillmentText : JSON.stringify(dbCustomers)
+      fulfillmentText : JSON.stringify(dbCustomers)
+     
 }
     res.json(response);
 
@@ -49,7 +50,7 @@ router.post("/customer",(req,res) => {
 
    const response = { 
       
-         fullfillmentText : "Webhook works fine",
+         fulfillmentText : "Webhook works fine",
    }
     
 
