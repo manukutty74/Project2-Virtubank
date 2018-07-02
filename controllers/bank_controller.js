@@ -28,7 +28,16 @@ router.post("/customers", function (req, res) {
 
   db.Customer.findAll({}).then(function (dbCustomers) {
 
-    res.json(dbCustomers);
+
+    const response = { 
+      
+      fullfillmentText : JSON.stringify(dbCustomers)
+}
+    res.json(response);
+
+    
+
+
   });
 
 });
@@ -40,9 +49,10 @@ router.post("/customer",(req,res) => {
 
    const response = { 
       
-         fullfillmentText : "Webook works fine",
+         fullfillmentText : "Webhook works fine",
    }
     
+
   res.json(response);
 
 
