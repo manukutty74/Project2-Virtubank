@@ -28,19 +28,11 @@ router.post("/customers", function (req, res) {
 
   db.Customer.findAll({}).then(function (dbCustomers) {
 
-    const response = { 
-      
-      fulfillmentText : JSON.stringify(dbCustomers)
-     
-}
-    res.json(response);
-
-    
-
-
+    res.json(dbCustomers);
   });
 
 });
+
 
 
 // findOne Customer
