@@ -24,14 +24,13 @@ router.get("/home", function (req, res) {
 
 
 // findAll Customers
-router.get("/customers", function (req, res) {
+router.post("/customers", function (req, res) {
 
   db.Customer.findAll({}).then(function (dbCustomers) {
 
-
     const response = { 
       
-      fulfillmentText : JSON.stringify(dbCustomer)
+      fulfillmentText : JSON.stringify(dbCustomers)
      
     }
 
@@ -46,11 +45,11 @@ router.get("/customers", function (req, res) {
 
 router.post("/customer/:id", function (req, res) {
 
-  db.Customer.findOne({where: {id: req.params.id},}).then(function (dbCustomer) {
+  db.Customer.findOne({where: {id: req.params.id},}).then(function (dbCustomers) {
   
     const response = { 
       
-      fulfillmentText : JSON.stringify(dbCustomer)
+      fulfillmentText : JSON.stringify(dbCustomers)
      
     }
     res.json(response);
