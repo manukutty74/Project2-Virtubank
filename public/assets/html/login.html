@@ -92,22 +92,40 @@
                 background-attachment: scroll;
             }
         }
+
+    .mck-box-top {
+    background-color: green;
+   }
+
+   #mck-msg-new.mck-btn{
+    background-color: green;
+    }
+
+    .mck-msg-right .mck-msg-box{
+    background-color: green;
+    color:white;
+    }
+
+    mck-msg-left .mck-msg-box{
+    background-color: white;
+    color:black;
+    }
+
+
+    
     </style>
     <script type="text/javascript">
         (function(d, m){ 
-          var o = {"appId":"5ff9068d1adac16a59d35690c5f9501","isAnonymousChat":true,"agentId":"manu_kutty@yahoo.com","agentName":"VirtubankGenie","conversationTitle":"VirtuBankGenie","email":"",botIds:["virtubankbot"]};
+          var o = {"appId":"5ff9068d1adac16a59d35690c5f9501","isAnonymousChat":true,"agentId":"manu_kutty@yahoo.com","agentName":"VirtubankGenie","conversationTitle":"VirtuBankGenie","email":"",botIds:["virtubankbot"],"chatLauncherHtml": "<img src='../images/chaticon.svg' width='70px' height='70px'/>"};
           var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
           s.src = "https://api.kommunicate.io/kommunicate.app";
           var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
           window.kommunicate = m; m._globals = o;
         })(document, window.kommunicate || {});
-    </script>
 
+        </script>
 
-
-
-
-
+    
 </head>
 
 <body>

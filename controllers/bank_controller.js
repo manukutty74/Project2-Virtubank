@@ -28,7 +28,6 @@ router.post("/customers", function (req, res) {
 
   db.Customer.findAll({}).then(function (dbCustomers) {
 
-
     const response = { 
       
       fulfillmentText : JSON.stringify(dbCustomers)
@@ -44,7 +43,29 @@ router.post("/customers", function (req, res) {
 });
 
 
-router.post("/customer",(req,res) => {
+// findOne Customer
+
+router.post("/customer/:id", function (req, res) {
+
+  db.Customer.findOne({where: {id: req.params.id},}).then(function (dbCustomer) {
+  
+    const response = { 
+      
+      fulfillmentText : JSON.stringify(dbCustomer)
+     
+}
+    res.json(response);
+
+    
+
+
+  });
+
+});
+
+
+
+router.post("/test",(req,res) => {
 
    const data = req.body;
 
