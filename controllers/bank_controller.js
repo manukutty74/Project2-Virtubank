@@ -24,7 +24,7 @@ router.get("/home", function (req, res) {
 
 
 // findAll Customers
-router.post("/customers", function (req, res) {
+router.get("/customers", function (req, res) {
 
   db.Customer.findAll({}).then(function (dbCustomers) {
 
