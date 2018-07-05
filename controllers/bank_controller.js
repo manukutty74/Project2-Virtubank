@@ -28,7 +28,14 @@ router.post("/customers", function (req, res) {
 
   db.Customer.findAll({}).then(function (dbCustomers) {
 
-    res.json(dbCustomers);
+
+    const response = { 
+      
+      fulfillmentText : JSON.stringify(dbCustomer)
+     
+    }
+
+    res.json(response);
   });
 
 });
@@ -45,7 +52,7 @@ router.post("/customer/:id", function (req, res) {
       
       fulfillmentText : JSON.stringify(dbCustomer)
      
-}
+    }
     res.json(response);
 
     
