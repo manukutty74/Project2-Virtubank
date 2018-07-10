@@ -46,7 +46,7 @@ router.post("/customers", function (req, res) {
 router.post("/customer/:id", function (req, res) {
 
   const CustomerID = req.params.id;
-  console.log(req.body.bodyqueryResult);
+  console.log(req.body);
   
   db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
   
