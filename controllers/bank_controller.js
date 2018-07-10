@@ -45,7 +45,7 @@ var nodemailer = require('nodemailer');
 
 //router.post("/customer/:id", function (req, res) {
 
-  router.post("/", function (req, res) {
+  router.post("/customer", function (req, res) {
 
   const CustomerID = req.body.result.parameters.client_no;
   
