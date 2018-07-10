@@ -45,14 +45,14 @@ router.post("/customers", function (req, res) {
 
 router.post("/customer/:id", function (req, res) {
 
-  console.log(req);
+  const CustomerID = req.params.id;
   
-  db.Customer.findOne({where: {id: req.params.id},}).then(function (dbCustomers) {
+  db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
   
     const response = { 
       
-     // fulfillmentText : JSON.stringify(dbCustomers)
-        fulfillmentText : "Webhook for id works fine for ID : " + req.params.id
+        fulfillmentText : JSON.stringify(dbCustomers)
+        //fulfillmentText : "Webhook for id works fine for ID : " + req.params.id
      
     }
     res.json(response);
@@ -73,6 +73,7 @@ router.post("/test",(req,res) => {
    const response = { 
       
          fulfillmentText : "Webhook works fine",
+
    }
     
 
