@@ -53,8 +53,8 @@ router.post("/customer/:id", function (req, res) {
     const response = { 
       
        // fulfillmentText : JSON.stringify(dbCustomers)
-        //fulfillmentText : "Webhook for id works fine for ID : " + req.params.id
-        fulfillmentText : res.body
+        fulfillmentText : "Webhook for id works fine for ID : " + req.params.id
+       // fulfillmentText : res.body
      
     }
     res.json(response);
