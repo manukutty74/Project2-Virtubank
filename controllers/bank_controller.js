@@ -74,7 +74,7 @@ router.post("/test",(req,res) => {
 
    const response = { 
       
-         fulfillmentText : req.body
+         fulfillmentText : req.body.result['action']
 
    }
     
