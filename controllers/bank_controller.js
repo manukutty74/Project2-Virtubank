@@ -10,34 +10,34 @@ var nodemailer = require('nodemailer');
 // });
 
 // Create all our routes and set up logic within those routes where required.
-router.get("/login", function (req, res) {
+// router.get("/login", function (req, res) {
 
-  //res.send("Hello Word");
-  res.sendFile(process.cwd() + "/public/assets/html/login.html");
-});
+//   //res.send("Hello Word");
+//   res.sendFile(process.cwd() + "/public/assets/html/login.html");
+// });
 
-router.get("/home", function (req, res) {
+// router.get("/home", function (req, res) {
 
-  //res.send("Hello Word");
-  res.sendFile(process.cwd() + "/public/assets/html/home.html");
-});
+//   //res.send("Hello Word");
+//   res.sendFile(process.cwd() + "/public/assets/html/home.html");
+// });
 
 
-// findAll Customers
-router.post("/customers", function (req, res) {
+// // findAll Customers
+// router.post("/customers", function (req, res) {
 
-  db.Customer.findAll({}).then(function (dbCustomers) {
+//   db.Customer.findAll({}).then(function (dbCustomers) {
 
-    const response = { 
+//     const response = { 
       
-      fulfillmentText : JSON.stringify(dbCustomers)
+//       fulfillmentText : JSON.stringify(dbCustomers)
      
-    }
+//     }
 
-    res.json(response);
-  });
+//     res.json(response);
+//   });
 
-});
+// });
 
 
 
@@ -45,7 +45,7 @@ router.post("/customers", function (req, res) {
 
 router.post("/customer/:id", function (req, res) {
 
-  const CustomerID = req.params.id;
+  const CustomerID = req.body.result['parameters'].client_no;
   console.log(req.body);
   
   db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
@@ -57,7 +57,10 @@ router.post("/customer/:id", function (req, res) {
       //  fulfillmentText : req.body.queryResult.queryText.parameters
      
     }
-    res.json(response);
+
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(response));
+    //res.json(response);
 
     
 
@@ -68,21 +71,21 @@ router.post("/customer/:id", function (req, res) {
 
 
 
-router.post("/test",(req,res) => {
+// router.post("/test",(req,res) => {
 
-   const data = req.body;
+//    const data = req.body;
 
-   const response = { 
+//    const response = { 
       
-         fulfillmentText : req.body.result['action']
+//          fulfillmentText : req.body.result['action']
 
-   }
+//    }
     
 
-  res.json(response);
+//   res.json(response);
 
 
-});
+// });
 
 
 
