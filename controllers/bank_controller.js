@@ -74,7 +74,7 @@ router.post("/test",(req,res) => {
 
    const response = { 
       
-         fulfillmentText : "Webhook works fine",
+         fulfillmentText : req.body
 
    }
     
