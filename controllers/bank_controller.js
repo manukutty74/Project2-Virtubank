@@ -4,40 +4,40 @@ var db = require("../models");
 var nodemailer = require('nodemailer');
 
 
-// router.use(function(req,res){  //express catch middleware if page doesn't exist
-// 	res.status(404);  //respond with status code
-// 	res.render('404'); //respond with 404 page
-// });
+router.use(function(req,res){  //express catch middleware if page doesn't exist
+	res.status(404);  //respond with status code
+	res.render('404'); //respond with 404 page
+});
 
-// Create all our routes and set up logic within those routes where required.
-// router.get("/login", function (req, res) {
+//Create all our routes and set up logic within those routes where required.
+router.get("/login", function (req, res) {
 
-//   //res.send("Hello Word");
-//   res.sendFile(process.cwd() + "/public/assets/html/login.html");
-// });
+  //res.send("Hello Word");
+  res.sendFile(process.cwd() + "/public/assets/html/login.html");
+});
 
-// router.get("/home", function (req, res) {
+router.get("/home", function (req, res) {
 
-//   //res.send("Hello Word");
-//   res.sendFile(process.cwd() + "/public/assets/html/home.html");
-// });
+  //res.send("Hello Word");
+  res.sendFile(process.cwd() + "/public/assets/html/home.html");
+});
 
 
 // // findAll Customers
-// router.post("/customers", function (req, res) {
+router.post("/customers", function (req, res) {
 
-//   db.Customer.findAll({}).then(function (dbCustomers) {
+  db.Customer.findAll({}).then(function (dbCustomers) {
 
-//     const response = { 
+    const response = { 
       
-//       fulfillmentText : JSON.stringify(dbCustomers)
+      fulfillmentText : JSON.stringify(dbCustomers)
      
-//     }
+    }
 
-//     res.json(response);
-//   });
+    res.json(response);
+  });
 
-// });
+});
 
 
 
@@ -56,8 +56,7 @@ var nodemailer = require('nodemailer');
     const response = { 
       
         fulfillmentText : JSON.stringify(dbCustomers)
-      //fulfillmentText : "Webhook for id works fine for ID : " + req.params.id
-      //  fulfillmentText : req.body.queryResult.queryText.parameters
+      
      
     }
 
