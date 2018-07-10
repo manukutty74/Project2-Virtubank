@@ -43,10 +43,11 @@ var nodemailer = require('nodemailer');
 
 // findOne Customer
 
-router.post("/customer/:id", function (req, res) {
+//router.post("/customer/:id", function (req, res) {
+
+  router.post("/", function (req, res) {
 
   const CustomerID = req.body.result['parameters'].client_no;
-  console.log(req.body);
   
   db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
   
