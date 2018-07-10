@@ -48,7 +48,7 @@ var nodemailer = require('nodemailer');
   router.post("/customer", function (req, res) {
 
     
-  const CustomerID = req.body.parameters.client_no;
+  const CustomerID = req.body.parameters;
 
   
   db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
@@ -62,8 +62,8 @@ var nodemailer = require('nodemailer');
     }
 
     res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(response));
-    //res.json(response);
+   // res.send(JSON.stringify(response));
+    res.json(response);
 
     
 
