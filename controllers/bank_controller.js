@@ -48,7 +48,7 @@ var nodemailer = require('nodemailer');
   router.post("/customer", function (req, res) {
 
     
-  const CustomerID = req.body.parameters.['client_no'];
+  const CustomerID = req.body.parameters.client_no;
 
   
   db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
