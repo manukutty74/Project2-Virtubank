@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
     <style>
         body,
         html {
@@ -94,11 +96,11 @@
         }
 
     .mck-box-top {
-    background-color: green;
+    background-color : green;
    }
 
    #mck-msg-new.mck-btn{
-    background-color: green;
+    background-color : green;
     }
 
     .mck-msg-right .mck-msg-box{
@@ -110,6 +112,24 @@
     background-color: white;
     color:black;
     }
+/*   This is for the floating button */ 
+
+    .float{
+	position:fixed;
+	width:80px;
+	height:80px;
+	bottom:450px;
+	right:14px;
+	background-color: green;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:28px;
+}
 
 
     
@@ -240,6 +260,16 @@
             <span class="border" style="opacity:0.5">Thank You. :)</span>
         </div>
     </div>
+
+    <div>
+
+     <a href="https://serene-cove-84009.herokuapp.com/" class="float">
+      <i class="fa fa-android my-float"></i>
+     </a>
+
+    </div>
+        
+ 
 
     <script>
         $(document).ready(function () {
