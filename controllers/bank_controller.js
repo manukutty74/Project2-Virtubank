@@ -51,6 +51,7 @@ router.post("/customers", function (req, res) {
   const CustomerID = req.body.queryResult.parameters.client_no;
   const WebhookID = req.body.queryResult.action;
   
+    // This is for one client
     if (WebhookID==='get.one.client.details') 
     {
         db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
@@ -68,26 +69,27 @@ router.post("/customers", function (req, res) {
         });
       } 
 
+   // This is for all clients 
+   if (WebhookID==='get.one.client.details') 
+   {
+
+    db.Customer.findAll({}).then(function (dbCustomers) {
+
+      const response = { 
+        
+        fulfillmentText : JSON.stringify(dbCustomers)
+       
+      }
+  
+      res.setHeader('Content-Type', 'application/json');
+      res.json(response);
+
+      
+    });
+
+   }
 
 });
-
-
-
-// router.post("/test",(req,res) => {
-
-//    const data = req.body;
-
-//    const response = { 
-      
-//          fulfillmentText : req.body.result['action']
-
-//    }
-    
-
-//   res.json(response);
-
-
-// });
 
 
 
