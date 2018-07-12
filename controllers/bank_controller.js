@@ -70,7 +70,7 @@ router.post("/customers", function (req, res) {
       } 
 
    // This is for all clients 
-   if (WebhookID==='get.one.client.details') 
+   if (WebhookID==='get.all.clients.details') 
    {
 
     db.Customer.findAll({}).then(function (dbCustomers) {
