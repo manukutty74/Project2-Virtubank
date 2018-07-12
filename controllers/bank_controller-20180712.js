@@ -49,25 +49,25 @@ router.post("/customers", function (req, res) {
 
     
   const CustomerID = req.body.queryResult.parameters.client_no;
-  const WebhookID = req.body.queryResult.action;
+
   
-    if (WebhookID==='get.one.customer') 
-    {
-        db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
-        
-          const response = { 
-            
-              fulfillmentText : JSON.stringify(dbCustomers)
-              
-          }
+  db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
+  
+    const response = { 
+      
+        fulfillmentText : JSON.stringify(dbCustomers)
+      
+     
+    }
 
-          res.setHeader('Content-Type', 'application/json');
-        // res.send(JSON.stringify(response));
-          res.json(response);
+    res.setHeader('Content-Type', 'application/json');
+   // res.send(JSON.stringify(response));
+    res.json(response);
 
-        });
-      } 
+    
 
+
+  });
 
 });
 
