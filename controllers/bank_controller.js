@@ -51,7 +51,7 @@ router.post("/customers", function (req, res) {
   const CustomerID = req.body.queryResult.parameters.client_no;
   const WebhookID = req.body.queryResult.action;
   
-    if (WebhookID==='get.one.customer') 
+    if (WebhookID==='get.one.client.details') 
     {
         db.Customer.findOne({where: {id: CustomerID},}).then(function (dbCustomers) {
         
