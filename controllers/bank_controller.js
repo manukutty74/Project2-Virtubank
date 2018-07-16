@@ -94,7 +94,7 @@ router.post("/customers", function (req, res) {
 
    if (WebhookID==='get.txns.for.one.client') 
    {
-    CustomerID = req.body.queryResult.parameters.client_No;
+    const CustomerID = req.body.queryResult.parameters.client_No;
     db.Txnjournal.findAll({where: {customer_no:CustomerID},}).then(function (dbTxns) {
 
       const response = { 
