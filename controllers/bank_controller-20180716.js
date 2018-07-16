@@ -90,43 +90,27 @@ router.post("/customers", function (req, res) {
 
    }
 
-   // Get transactions for one client 
-   
-   if (WebhookID==='get.one.client.details') 
-   {
-    db.Txnjournal.findAll({where: {customer_no:CustomerID},}).then(function (dbTxns) {
-
-      const response = { 
-        
-        fulfillmentText : JSON.stringify(dbTxns)
-       
-      }
-      res.setHeader('Content-Type', 'application/json');
-      res.json(response);
-    });
-
-  }
-
 });
 
 
 // findAll transactions Customers
-// router.get("/txns/:id", function (req, res) {
-//   console.log("inside txn route ");
-//   const CustomerID = req.params.id;
+router.get("/txns/:id", function (req, res) {
+  console.log("inside txn route ");
+  const CustomerID = req.params.id;
 
-//   db.Txnjournal.findAll({where: {customer_no:CustomerID},}).then(function (dbTxns) {
+  db.Txnjournal.findAll({where: {customer_no:CustomerID},}).then(function (dbTxns) {
 
-//     const response = { 
+    const response = { 
       
-//       fulfillmentText : JSON.stringify(dbTxns)
+      fulfillmentText : JSON.stringify(dbTxns)
      
-//     }
-//     res.setHeader('Content-Type', 'application/json');
-//     res.json(response);
-//   });
+    }
 
-// });
+    res.json(response);
+  });
+
+});
+
 
 
 module.exports = router;
