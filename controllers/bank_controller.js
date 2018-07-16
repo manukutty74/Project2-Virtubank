@@ -91,8 +91,8 @@ router.post("/customers", function (req, res) {
    }
 
    // Get transactions for one client 
-   
-   if (WebhookID==='get.one.client.details') 
+
+   if (WebhookID==='get.txns.for.one.client') 
    {
     db.Txnjournal.findAll({where: {customer_no:CustomerID},}).then(function (dbTxns) {
 
